@@ -1,7 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Sito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background: #333;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 2rem 1rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        #intro {
+            text-align: center;
+        }
+        #intro img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-top: 1rem;
+        }
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.3rem;
+            color: #4CAF50;
+        }
+        footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <h1>Benvenuto nel Mio Sito</h1>
+    </header>
+    <nav>
+        <a href="#intro">Chi Sono</a>
+        <a href="#gallery">Galleria</a>
+        <a href="#contact">Contatti</a>
+    </nav>
+
+    <section id="intro">
+        <h2>Chi Sono</h2>
+        <img src="tua_foto.jpg" alt="La mia foto">
+        <p>Ciao! Mi chiamo [Il Tuo Nome]. Sono appassionato di [hobby/interessi]. Questo sito è un piccolo spazio per condividere un po' di me con voi.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Galleria</h2>
+        <p>Alcuni dei miei momenti preferiti:</p>
+        <img src="immagine1.jpg" alt="Immagine 1" style="max-width:100%; margin-bottom:1rem;">
+        <img src="immagine2.jpg" alt="Immagine 2" style="max-width:100%; margin-bottom:1rem;">
+    </section>
+
+    <section id="contact">
+        <h2>Contattami</h2>
+        <p>Seguimi sui social!</p>
+        <footer>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </footer>
+    </section>
 </body>
 </html>
