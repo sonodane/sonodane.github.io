@@ -64,6 +64,14 @@
             text-decoration: underline;
         }
     </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo in Tempo Reale</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .container { max-width: 400px; margin: auto; padding: 20px; border-radius: 10px; background: #f4f4f4; }
+        input, button { padding: 10px; margin: 5px; }
+    </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8284645985704855"
     crossorigin="anonymous"></script>
 </head>
@@ -81,6 +89,25 @@
         <h2>Chi Sono</h2>
         <img src="michael-scott-the-office.gif" alt="La mia foto">
     </section>
+    <h1>🌤️ Meteo in Tempo Reale</h1>
+    <div class="container">
+        <form method="POST">
+            <input type="text" name="city" placeholder="Inserisci una città" required>
+            <button type="submit">Cerca</button>
+        </form>
+
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        {% if weather %}
+            <h2>{{ weather.city }}</h2>
+            <p>🌡️ Temperatura: {{ weather.temperature }}°C</p>
+            <p>☁️ Condizioni: {{ weather.description }}</p>
+            <p>💧 Umidità: {{ weather.humidity }}%</p>
+            <p>💨 Vento: {{ weather.wind }} m/s</p>
+        {% endif %}
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
